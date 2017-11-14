@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yacikgoz.concentration.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/app_name"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/relativeLayout4">
+
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/relativeLayout4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/score"
+            android:layout_toStartOf="@+id/mistake"
+            android:contentDescription="mistake"
+            app:srcCompat="@drawable/cross"/>
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/score"
+            android:contentDescription="score"
+            app:srcCompat="@drawable/tick"/>
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/mistake"
+            android:layout_gravity="left"
+            android:layout_toEndOf="@+id/mistake"
+            android:contentDescription="chronometer"
+            app:srcCompat="@drawable/timer"/>
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView8"
+            android:layout_alignTop="@+id/imageView6"
+            android:layout_toEndOf="@+id/imageView8"
+            android:layout_weight="0.58"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView7"
+            android:layout_alignTop="@+id/imageView7"
+            android:layout_toStartOf="@+id/imageView6"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/mistake"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/imageView6"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/imageView6"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/chance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/table"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>
